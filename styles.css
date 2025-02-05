@@ -1,24 +1,27 @@
+/* ERMS Website Styles - Inspired by Alvarez & Marsal, using ERMS Colors */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f8f8;
     color: #333;
 }
 header {
-    background-color: #003366;
+    background-color: #2d2d2d;
     color: white;
-    padding: 15px 0;
-    text-align: center;
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+}
+.logo img {
+    max-height: 60px;
 }
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
+    padding: 0;
+    margin: 0;
 }
 nav ul li {
     margin: 0 15px;
@@ -26,33 +29,75 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 1.1em;
     font-weight: bold;
 }
 .hero {
     background: url('banner.jpg') no-repeat center center/cover;
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
     color: white;
 }
 .hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 3em;
+    margin-bottom: 15px;
 }
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-bottom: 20px;
 }
 .cta-button {
-    background-color: #009688;
+    background-color: #b31b1b;
     color: white;
-    padding: 15px 25px;
+    padding: 15px 30px;
     text-decoration: none;
     font-size: 1.2em;
     border-radius: 5px;
+    display: inline-block;
+}
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 5%;
+}
+.service-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+#about, #contact {
+    background-color: #e6e6e6;
+    padding: 50px 5%;
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+}
+form button {
+    background-color: #b31b1b;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
 }
 footer {
-    background-color: #003366;
+    background-color: #2d2d2d;
     color: white;
     text-align: center;
     padding: 20px 0;
+    font-size: 0.9em;
 }
