@@ -1,16 +1,12 @@
 /* ERMS Website Styles - Professional & Optimized */
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: radial-gradient(circle at 10% 90%, 
-        #b31b1b 5%,    /* Dark Red at the bottom-left corner */
-        #d3d3d3 20%,   /* Gray blends in */
-        white 80%      /* White dominates the top-right */
-    );
-    color: #333;
+    background: radial-gradient(circle at bottom left, 
+        rgba(179, 27, 27, 0.6) 0%, 
+        rgba(204, 204, 204, 0.4) 40%, 
+        white 80%);
 }
+
 header {
     background-color: white; /* White background */
     padding: 10px 5%;
@@ -190,26 +186,53 @@ hr {
     nav ul {
         flex-direction: column;
         align-items: center;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
     }
 
     nav ul li {
-        margin: 10px 0;
         width: 100%;
         text-align: center;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        background-color: #b31b1b;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+}
+/* Make it mobile friendly part 2 for logo */
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 80px; /* Make logo bigger */
+    }
+
+    .hero {
+        padding: 80px 20px;
     }
 
     .hero h1 {
-        font-size: 2em; /* Reduce heading size for small screens */
+        font-size: 2.2em; /* Bigger text */
     }
 
-    .service-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-box {
-        width: 90%; /* Make service boxes full width on mobile */
+    .hero p {
+        font-size: 1.2em;
     }
 }
-
+/* Make it mobile friendly part 3 for logo */
 
