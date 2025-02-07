@@ -185,5 +185,31 @@ hr {
     color: #b31b1b;
     font-weight: bold;
 }
+/* Make it mobile friendly */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2em; /* Reduce heading size for small screens */
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 90%; /* Make service boxes full width on mobile */
+    }
+}
 
 
