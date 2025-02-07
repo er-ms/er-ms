@@ -219,7 +219,7 @@ hr {
 /* Make it mobile friendly part 2 for logo */
 @media (max-width: 768px) {
     .logo img {
-        max-height: 200px; /* Make logo bigger */
+        max-height: 80px; /* Make logo bigger */
     }
 
     .hero {
