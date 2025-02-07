@@ -234,5 +234,45 @@ hr {
         font-size: 1.2em;
     }
 }
-/* Make it mobile friendly part 3 for logo */
+@media (max-width: 768px) {
+    .hero .logo {
+        display: none; /* Hide hero logo only on mobile */
+    }
+}
+/* Make it mobile friendly part 3 for burger menu */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block !important;  /* Force it to appear */
+        cursor: pointer;
+        background-color: #b31b1b;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        font-size: 1.2em;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
 
