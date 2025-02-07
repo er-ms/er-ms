@@ -272,7 +272,7 @@ hr {
 }
 /* Make it mobile friendly part 4 hide hero logo */
 @media (max-width: 768px) {
-    .hero .logo img {
+    .hero img {
         display: none; /* Hide hero logo only on mobile */
     }
 }
