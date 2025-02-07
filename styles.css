@@ -142,5 +142,37 @@ footer {
     font-size: 0.9em;
 }
 
+/* Hero Section (Homepage) */
+.hero {
+    text-align: center;
+    padding: 50px;
+}
+
+.hero img {
+    max-width: 250px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: #666;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #000;
+}
+
+hr {
+    width: 60%;
+    border: 1px solid #b31b1b;
+    margin: 20px auto;
+}
+
+.highlight-text {
+    font-size: 1.5em;
+    color: #b31b1b;
+    font-weight: bold;
+}
 
 
