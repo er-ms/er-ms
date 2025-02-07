@@ -8,31 +8,49 @@
     <meta name="author" content="ERMS">
     <title>ERMS - Intelligent Consulting Solutions</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // JavaScript to show only the selected section
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll("section");
+            sections.forEach(section => section.style.display = "none");
+            document.getElementById(sectionId).style.display = "block";
+        }
+
+        // Show Home by default on page load
+        window.onload = function() {
+            showSection('home');
+        };
+    </script>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="logo">
-            <img src="logo.png" alt="ERMS Logo">
+            <img src="https://raw.githubusercontent.com/er-ms/er-ms/main/erms-logo.png" alt="ERMS Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#industries">Industries</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('services')">Services</a></li>
+                <li><a href="#" onclick="showSection('industries')">Industries</a></li>
+                <li><a href="#" onclick="showSection('about')">About Us</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
+
+    <!-- Hero Section (Homepage) -->
     <section id="home">
         <div class="hero">
-            <h1>Strategic Insights. Advanced Analytics. Measurable Impact.</h1>
-            <p>Transforming risk management and business consulting through cutting-edge analytics and actuarial expertise.</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
+            <img src="https://raw.githubusercontent.com/er-ms/er-ms/main/erms-logo.png" alt="ERMS Logo">
+            <p class="tagline">Insight-Driven Solutions for Strategic Decision-Making</p>
+            <h1>Healthcare Analytics & Consulting Services</h1>
+            <hr>
+            <p class="highlight-text">Expertly Tailored to Address Your Unique Challenges</p>
         </div>
     </section>
-    
+
+    <!-- Services Section -->
     <section id="services">
         <h2>Our Expertise</h2>
         <div class="service-container">
@@ -50,28 +68,31 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- About Us Section -->
     <section id="about">
         <h2>About ERMS</h2>
         <p>At ERMS, we combine actuarial expertise with AI-powered analytics to drive informed decision-making in insurance, healthcare, and financial industries.</p>
     </section>
-    
+
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
         <form action="#" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-            
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            
+
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-            
+
             <button type="submit">Send Message</button>
         </form>
     </section>
-    
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 ERMS. All rights reserved.</p>
     </footer>
