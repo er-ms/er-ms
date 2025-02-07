@@ -6,8 +6,8 @@ body {
     padding: 0;
     background: radial-gradient(circle at 10% 90%, 
         #b31b1b 5%,    /* Dark Red at the bottom-left corner */
-        #d3d3d3 30%,   /* Gray blends in */
-        white 70%      /* White dominates the top-right */
+        #d3d3d3 20%,   /* Gray blends in */
+        white 80%      /* White dominates the top-right */
     );
     color: #333;
 }
