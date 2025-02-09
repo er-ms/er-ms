@@ -55,33 +55,26 @@
             }
         }
         @media (min-width: 769px) {
-            .menu-toggle {
-                display: none;
-            }
             .services-container {
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center everything */
                 max-width: 1100px;
                 margin: 0 auto;
                 padding: 50px 5%;
             }
-            
-            .services-text {
-                width: 50%; /* Reduce text width to balance space */
-                text-align: left;
-            }
-            
             .services-visual {
-                width: 50%; /* Increase space for the bubble */
-                text-align: right;
-                display: flex;
-                justify-content: flex-end; /* Align image to the right */
+                width: 60%;
+                text-align: center;
+                margin-bottom: 20px; /* Add space below the bubble */
             }
-            
             .services-visual img {
-                width: 80%; /* Reduce bubble size */
-                max-width: 350px; /* Ensures it doesn’t get too big */
+                width: 80%; /* Keep bubble size moderate */
+                max-width: 400px;
+            }
+            .services-text {
+                width: 100%;
+                text-align: left;
             }
         }
     </style>
