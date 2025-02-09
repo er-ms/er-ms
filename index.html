@@ -33,6 +33,13 @@
             showSection('home');
         };
     </script>
+    <style>
+        @media (max-width: 768px) {
+            .hero-logo img {
+                display: none !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- =========================================================
@@ -62,8 +69,8 @@
          ========================================================= -->
     <section id="home" class="hero">
         <!-- 2.1 Hero Logo -->
-        <div class="hero-logo">
-            <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/logo.png" alt="ERMS Hero Logo">
+        <div class="hero-logo" style="text-align: center;">
+            <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/logo.png" alt="ERMS Hero Logo" style="max-width: 300px; display: block; margin: 0 auto;">
         </div>
         
         <!-- 2.2 Hero Text -->
@@ -72,7 +79,6 @@
         <hr>
         <p class="highlight-text" style="color: #b31b1b; text-align: center;">Expertly Tailored to Address Your Unique Challenges</p>
     </section>
-
  <!-- =========================================================
          SECTION : 
          ========================================================= -->
