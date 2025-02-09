@@ -14,25 +14,20 @@
             let menu = document.querySelector('nav ul');
             menu.classList.toggle('active');
         }
-         // JavaScript to enable section navigation and close menu on mobile
-       function showSection(sectionId) {
+
+        // JavaScript to enable section navigation and close menu on mobile
+        function showSection(sectionId) {
             let sections = document.querySelectorAll("section");
             sections.forEach(section => section.style.display = "none");
-        
-            let selectedSection = document.getElementById(sectionId);
-            selectedSection.style.display = "block";
-        
-            // Fix layout issues when switching sections
-            if (sectionId === "services") {
-                document.querySelector(".services-container").style.display = "flex";
-            }
-        
+            document.getElementById(sectionId).style.display = "block";
+            
             // Close the menu when an item is clicked (for mobile view)
             let menu = document.querySelector('nav ul');
             if (menu.classList.contains('active')) {
                 menu.classList.remove('active');
             }
         }
+
         // Ensure Home is visible on page load
         window.onload = function() {
             document.getElementById('home').style.display = "block";
@@ -59,37 +54,36 @@
                 width: 80%; /* Keep bubble size on mobile */
             }
         }
-         @media (min-width: 769px) {
+        @media (min-width: 769px) {
             .menu-toggle {
                 display: none;
             }
-         
-           .services-container {
+            .services-container {
                 display: flex;
-                align-items: flex-start;
+                align-items: center;
                 justify-content: space-between;
                 max-width: 1100px;
                 margin: 0 auto;
                 padding: 50px 5%;
-                gap: 40px; /* Add spacing between text and image */
             }
-            
             .services-text {
-                width: 65%; /* Give text more space */
+                width: 60%;
                 text-align: left;
+                padding-right: 20px;
             }
-        
             .services-visual {
-                width: 35%; /* Reduce image width */
+                width: 40%;
+                text-align: right;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                position: relative;
+                top: 20px; /* Moves the bubble slightly lower */
+                right: -20px; /* Moves the bubble slightly to the right */
             }
-        
             .services-visual img {
-                width: 100%; /* Adjust image size */
-                max-width: 300px; /* Prevent it from getting too large */
-                display: block;
+                width: 90%; /* Ensure smaller bubble size and proper alignment */
+                max-width: 400px;
             }
         }
     </style>
@@ -115,20 +109,7 @@
     </header>
 
     <!-- =========================================================
-         SECTION 2: HERO SECTION (HOMEPAGE) - FIXED AGAIN
-         ========================================================= -->
-    <section id="home" class="hero" style="display: block;">
-        <div class="hero-logo" style="text-align: center;">
-            <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/logo.png" alt="ERMS Hero Logo" style="max-width: 300px; display: block; margin: 0 auto;">
-        </div>
-        <p class="tagline" style="color: #333; text-align: center;">Insight-Driven Solutions for Strategic Decision-Making</p>
-        <h1 style="color: black; text-align: center;">Driving Business Success Through Comprehensive Management Consulting and Advanced Analytics</h1>
-        <hr>
-        <p class="highlight-text" style="color: #b31b1b; text-align: center;">Expertly Tailored to Address Your Unique Challenges</p>
-    </section>
-
-    <!-- =========================================================
-         SECTION 3: SERVICES (Fixed Layout Alignment)
+         SECTION 3: SERVICES (Fixed Layout with Adjustments)
          ========================================================= -->
     <section id="services" class="services-container">
         <div class="services-text">
