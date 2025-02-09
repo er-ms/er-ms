@@ -22,6 +22,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #b31b1b;
+    position: relative;
 }
 
 /* 2.1 Logo Styling */
@@ -115,15 +116,11 @@ nav ul li a:hover {
         position: absolute;
         right: 10px;
         top: 15px;
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     nav ul {
         display: none;
-    }
-
-    nav ul.active {
-        display: flex;
         flex-direction: column;
         background: rgba(0, 0, 0, 0.8);
         width: 100%;
@@ -131,6 +128,10 @@ nav ul li a:hover {
         top: 60px;
         left: 0;
         padding: 10px;
+    }
+
+    nav ul.active {
+        display: flex;
     }
 
     nav ul li {
@@ -149,5 +150,10 @@ nav ul li a:hover {
 
     .hero p {
         font-size: 1.2em;
+    }
+
+    /* 4.3 Hide Hero Logo on Mobile */
+    .hero .hero-logo img {
+        display: none;
     }
 }
