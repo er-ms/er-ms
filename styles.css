@@ -1,5 +1,10 @@
-/* ERMS Website Styles - Professional & Optimized */
-/* General Styles */
+/* =========================================================
+   ERMS Website Styles - Professional & Optimized
+   ========================================================= */
+
+/* =========================================================
+   SECTION 1: GENERAL STYLES
+   ========================================================= */
 body {
     background: radial-gradient(circle at bottom left, 
         rgba(179, 27, 27, 0.6) 0%, 
@@ -7,19 +12,24 @@ body {
         white 80%);
 }
 
+/* =========================================================
+   SECTION 2: HEADER & NAVIGATION
+   ========================================================= */
 header {
-    background-color: white; /* White background */
+    background-color: white;
     padding: 10px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #b31b1b; /* Adds a slight separation */
+    border-bottom: 2px solid #b31b1b;
 }
 
+/* 2.1 Logo Styling */
 .logo img {
-    max-height: 50px; /* Adjust logo size */
+    max-height: 50px;
 }
 
+/* 2.2 Navigation Bar */
 nav ul {
     list-style: none;
     display: flex;
@@ -32,24 +42,24 @@ nav ul li {
 }
 
 nav ul li a {
-    background-color: #e6e6e6; /* Light gray button */
-    color: black; /* Text color */
+    background-color: #e6e6e6;
+    color: black;
     text-decoration: none;
     font-size: 1.1em;
     font-weight: bold;
     padding: 10px 15px;
-    border-radius: 5px; /* Slightly rounded corners */
+    border-radius: 5px;
     transition: background 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    background-color: #b31b1b; /* Dark red on hover */
+    background-color: #b31b1b;
     color: white;
 }
 
-
-
-/* Hero Section */
+/* =========================================================
+   SECTION 3: HERO SECTION
+   ========================================================= */
 .hero {
     background: url('banner.jpg') no-repeat center center/cover;
     text-align: center;
@@ -57,7 +67,13 @@ nav ul li a:hover {
     color: white;
 }
 
-/* Hero Text */
+/* 3.1 Hero Logo */
+.hero .hero-logo img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+/* 3.2 Hero Text */
 .hero h1 {
     font-size: 3em;
     margin-bottom: 15px;
@@ -68,9 +84,9 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* Call-to-Action Button */
+/* 3.3 Call-to-Action Button */
 .cta-button {
-    background-color: #b31b1b; /* Red */
+    background-color: #b31b1b;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -81,164 +97,16 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background-color: #801515; /* Darker Red */
+    background-color: #801515;
 }
 
-/* Service Section */
-.service-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 50px 5%;
-}
-
-/* Service Boxes */
-.service-box {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 30%;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    border-left: 5px solid #b31b1b; /* Red */
-}
-
-/* About & Contact Sections */
-#about, #contact {
-    background-color: #e6e6e6;
-    padding: 50px 5%;
-    text-align: center;
-}
-
-/* Form Styling */
-form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 0 auto;
-}
-
-form input, form textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-}
-
-form button {
-    background-color: #b31b1b; /* Red */
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
-
-form button:hover {
-    background-color: #801515; /* Darker Red */
-}
-
-/* Footer */
-footer {
-    background-color: #333; /* Grey */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-}
-
-/* Hero Section (Homepage) */
-.hero {
-    text-align: center;
-    padding: 50px;
-}
-
-.hero img {
-    max-width: 250px;
-    margin-bottom: 10px;
-}
-
-.tagline {
-    font-size: 1.2em;
-    color: #666;
-}
-
-h1 {
-    font-size: 2.5em;
-    color: #000;
-}
-
-hr {
-    width: 60%;
-    border: 1px solid #b31b1b;
-    margin: 20px auto;
-}
-
-.highlight-text {
-    font-size: 1.5em;
-    color: #b31b1b;
-    font-weight: bold;
-}
-/* Make it mobile friendly */
+/* =========================================================
+   SECTION 4: MOBILE RESPONSIVENESS
+   ========================================================= */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        background: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        display: none;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-    }
-
+    /* 4.1 Mobile Navigation */
     .menu-toggle {
         display: block;
-        cursor: pointer;
-        background-color: #b31b1b;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        position: absolute;
-        right: 10px;
-        top: 15px;
-    }
-}
-/* Make it mobile friendly part 2 for logo */
-@media (max-width: 768px) {
-    .logo img {
-        max-height: 80px; /* Make logo bigger */
-    }
-
-    .hero {
-        padding: 80px 20px;
-    }
-
-    .hero h1 {
-        font-size: 2.2em; /* Bigger text */
-    }
-
-    .hero p {
-        font-size: 1.2em;
-    }
-}
-
-/* Make it mobile friendly part 3 for burger menu */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block !important;  /* Force it to appear */
         cursor: pointer;
         background-color: #b31b1b;
         color: white;
@@ -269,11 +137,17 @@ hr {
         text-align: center;
         padding: 10px;
     }
-}
-/* Make it mobile friendly part 4 hide hero logo */
-@media (max-width: 768px) {
-    .hero img {
-        display: none; /* Hide hero logo only on mobile */
+
+    /* 4.2 Mobile Hero Adjustments */
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
     }
 }
-
