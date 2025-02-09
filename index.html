@@ -69,19 +69,20 @@
             .services-text {
                 width: 58%;
                 text-align: left;
-                padding-right: 20px;
-                border-right: 2px solid #ccc; /* Moves separator between text & bubble */
-                padding-right: 30px; /* Adds space to separate text from line */
+                padding-right: 30px;
+                border-right: 2px solid #ccc; /* Vertical separator between text & bubble */
             }
             .services-visual {
-                width: 40%;
+                width: 38%;
                 text-align: center;
                 display: flex;
                 justify-content: center;
+                align-items: center; /* Ensure the image is centered */
             }
             .services-visual img {
-                width: 90%; /* Ensure smaller bubble size and proper alignment */
-                max-width: 400px;
+                width: 100%; /* Make sure the image fits inside the space */
+                max-width: 350px; /* Prevent it from becoming too large */
+                display: block;
             }
         }
     </style>
