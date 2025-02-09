@@ -50,13 +50,38 @@
                 cursor: pointer;
                 font-size: 1.5em;
             }
+            .services-visual img {
+                width: 80%; /* Reduce bubble size on mobile */
+            }
         }
         @media (min-width: 769px) {
             .menu-toggle {
                 display: none;
             }
         }
+
+        /* Expandable Service Sections for Mobile */
+        .service-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+        .service-description {
+            display: none;
+            padding: 5px 10px;
+            font-size: 0.9em;
+            color: #333;
+        }
+        .service-item.active .service-description {
+            display: block;
+        }
     </style>
+    <script>
+        function toggleServiceDetails(event) {
+            let item = event.currentTarget;
+            item.classList.toggle("active");
+        }
+    </script>
 </head>
 <body>
     <!-- =========================================================
@@ -79,32 +104,35 @@
     </header>
 
     <!-- =========================================================
-         SECTION 2: HERO SECTION (HOMEPAGE) - FIXED FOR MOBILE
-         ========================================================= -->
-    <section id="home" class="hero" style="display: block;">
-        <div class="hero-logo" style="text-align: center;">
-            <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/logo.png" alt="ERMS Hero Logo" style="max-width: 300px; display: block; margin: 0 auto;">
-        </div>
-        <p class="tagline" style="color: #333; text-align: center;">Insight-Driven Solutions for Strategic Decision-Making</p>
-        <h1 style="color: black; text-align: center;">Driving Business Success Through Comprehensive Management Consulting and Advanced Analytics</h1>
-        <hr>
-        <p class="highlight-text" style="color: #b31b1b; text-align: center;">Expertly Tailored to Address Your Unique Challenges</p>
-    </section>
-
-    <!-- =========================================================
-         SECTION 3: SERVICES
+         SECTION 3: SERVICES (Expanded for Mobile)
          ========================================================= -->
     <section id="services" class="services-container">
         <div class="services-text">
             <h2>Our Expertise</h2>
-            <ul>
-                <li><strong>Risk & Financial Modeling</strong> - Pricing, reserving, and risk assessment.</li>
-                <li><strong>Regulatory Compliance</strong> - Guidance on regulatory standards.</li>
-                <li><strong>Business Strategy & Growth</strong> - Strategic consulting for sustainable growth.</li>
-                <li><strong>Predictive Analytics</strong> - Forecast trends & optimize retention.</li>
-                <li><strong>Data Analytics & Reporting</strong> - Custom reports for data-driven decisions.</li>
-                <li><strong>Risk Management Solutions</strong> - Strengthening financial resilience.</li>
-            </ul>
+            <div class="service-item" onclick="toggleServiceDetails(event)">
+                <strong>Risk & Financial Modeling</strong>
+                <div class="service-description">Comprehensive support for pricing, reserving, risk assessment, and predictive modeling for insurance and financial sectors.</div>
+            </div>
+            <div class="service-item" onclick="toggleServiceDetails(event)">
+                <strong>Regulatory Compliance</strong>
+                <div class="service-description">Expert guidance in navigating complex regulatory frameworks, ensuring full compliance with international standards.</div>
+            </div>
+            <div class="service-item" onclick="toggleServiceDetails(event)">
+                <strong>Business Strategy & Growth</strong>
+                <div class="service-description">Helping businesses scale efficiently by leveraging data-driven insights and strategic planning.</div>
+            </div>
+            <div class="service-item" onclick="toggleServiceDetails(event)">
+                <strong>Predictive Analytics</strong>
+                <div class="service-description">Using AI-driven analytics to forecast trends, optimize customer retention, and enhance business performance.</div>
+            </div>
+            <div class="service-item" onclick="toggleServiceDetails(event)">
+                <strong>Data Analytics & Reporting</strong>
+                <div class="service-description">Creating customized reports and dashboards to support real-time decision-making and financial optimization.</div>
+            </div>
+            <div class="service-item" onclick="toggleServiceDetails(event)">
+                <strong>Risk Management Solutions</strong>
+                <div class="service-description">Developing risk mitigation strategies to enhance financial resilience and operational sustainability.</div>
+            </div>
         </div>
         <div class="services-visual">
             <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/brochurevisual.png" alt="Our Services">
