@@ -51,6 +51,79 @@
                 font-size: 1.5em;
             }
         }
+        /* Services Section Styling with Animations */
+        .services-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 5%;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .services-text {
+            width: 50%;
+            animation: slideInLeft 1s ease-in-out forwards;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .services-visual {
+            width: 40%;
+            animation: slideInRight 1s ease-in-out forwards;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .services-visual img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .services-visual img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .services-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .services-text, .services-visual {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -61,59 +134,45 @@
         <div class="logo">
             <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/logo.png" alt="ERMS Logo">
         </div>
-        <!-- 1.1 Mobile Menu Toggle Button -->
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        
-        <!-- 1.2 Navigation Menu -->
         <nav>
             <ul style="text-align: center; list-style: none; padding-left: 10px;">
-                <li style="padding: 5px 0;"><a href="#" onclick="showSection('home')" style="text-decoration: none; color: black; display: block;">Home</a></li>
-                <li style="padding: 5px 0;"><a href="#" onclick="showSection('services')" style="text-decoration: none; color: black; display: block;">Services</a></li>
-                <li style="padding: 5px 0;"><a href="#" onclick="showSection('industries')" style="text-decoration: none; color: black; display: block;">Industries</a></li>
-                <li style="padding: 5px 0;"><a href="#" onclick="showSection('about')" style="text-decoration: none; color: black; display: block;">About Us</a></li>
-                <li style="padding: 5px 0;"><a href="#" onclick="showSection('contact')" style="text-decoration: none; color: black; display: block;">Contact</a></li>
+                <li style="padding: 5px 0;"><a href="#" onclick="showSection('home')">Home</a></li>
+                <li style="padding: 5px 0;"><a href="#" onclick="showSection('services')">Services</a></li>
+                <li style="padding: 5px 0;"><a href="#" onclick="showSection('industries')">Industries</a></li>
+                <li style="padding: 5px 0;"><a href="#" onclick="showSection('about')">About Us</a></li>
+                <li style="padding: 5px 0;"><a href="#" onclick="showSection('contact')">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- =========================================================
-         SECTION 2: HERO SECTION (HOMEPAGE)
+         SECTION 3: SERVICES
          ========================================================= -->
-    <section id="home" class="hero">
-        <!-- 2.1 Hero Logo -->
-        <div class="hero-logo" style="text-align: center;">
-            <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/logo.png" alt="ERMS Hero Logo" style="max-width: 300px; display: block; margin: 0 auto;">
+    <section id="services" class="services-container">
+        <div class="services-text">
+            <h2>Our Expertise</h2>
+            <ul>
+                <li><strong>Risk & Financial Modeling</strong> - Pricing, reserving, and risk assessment.</li>
+                <li><strong>Regulatory Compliance</strong> - Guidance on regulatory standards.</li>
+                <li><strong>Business Strategy & Growth</strong> - Strategic consulting for sustainable growth.</li>
+                <li><strong>Predictive Analytics</strong> - Forecast trends & optimize retention.</li>
+                <li><strong>Data Analytics & Reporting</strong> - Custom reports for data-driven decisions.</li>
+                <li><strong>Risk Management Solutions</strong> - Strengthening financial resilience.</li>
+            </ul>
         </div>
-        
-        <!-- 2.2 Hero Text -->
-        <p class="tagline" style="color: #333; text-align: center;">Insight-Driven Solutions for Strategic Decision-Making</p>
-        <h1 style="color: black; text-align: center;">Driving Business Success Through Comprehensive Management Consulting and Advanced Analytics</h1>
-        <hr>
-        <p class="highlight-text" style="color: #b31b1b; text-align: center;">Expertly Tailored to Address Your Unique Challenges</p>
+        <div class="services-visual">
+            <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/brochurevisual.png" alt="Our Services">
+        </div>
     </section>
+</body>
+</html>
 
-    <!-- =========================================================
+   
+     <!-- =========================================================
          SECTION : 
          ========================================================= -->
 
-     <!-- Services Section -->
-    <section id="services">
-        <h2>Our Expertise</h2>
-        <div class="service-container">
-            <div class="service-box">
-                <h3>AI-Driven Pricing</h3>
-                <p>Optimized pricing models using data science and actuarial insights.</p>
-            </div>
-            <div class="service-box">
-                <h3>Fraud, Waste & Abuse Detection</h3>
-                <p>Advanced analytics to detect and prevent financial leakage.</p>
-            </div>
-            <div class="service-box">
-                <h3>IFRS 17 & Risk Compliance</h3>
-                <p>Helping businesses navigate evolving regulatory landscapes.</p>
-            </div>
-        </div>
-    </section>
 
     <!-- About Us Section -->
     <section id="about">
