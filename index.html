@@ -59,44 +59,31 @@
                 display: none;
             }
          
-            /* Default Layout for Other Sections */
-            .default-container {
+           .services-container {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: space-between;
                 max-width: 1100px;
                 margin: 0 auto;
                 padding: 50px 5%;
-            }
-        
-            /* Unique Layout for Services Section */
-            .services-container {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                max-width: 1100px;
-                margin: 0 auto;
-                padding: 50px 5%;
+                gap: 40px; /* Add spacing between text and image */
             }
             
             .services-text {
-                width: 58%;
+                width: 65%; /* Give text more space */
                 text-align: left;
-                padding-right: 30px;
-                border-right: 2px solid #ccc; /* Separator line BETWEEN text & bubble */
             }
         
             .services-visual {
-                width: 40%;
-                text-align: center;
+                width: 35%; /* Reduce image width */
                 display: flex;
                 justify-content: center;
-                align-items: center; /* Ensure the image is centered */
+                align-items: center;
             }
         
             .services-visual img {
-                width: 100%; /* Fill the available space */
-                max-width: 350px; /* Prevents it from getting too large */
+                width: 100%; /* Adjust image size */
+                max-width: 300px; /* Prevent it from getting too large */
                 display: block;
             }
         }
