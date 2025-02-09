@@ -54,12 +54,24 @@
                 width: 80%; /* Reduce bubble size on mobile */
             }
         }
-        @media (min-width: 769px) {
+         @media (min-width: 769px) {
             .menu-toggle {
                 display: none;
             }
+            .services-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .services-text {
+                width: 50%;
+            }
+            .services-visual {
+                width: 35%;
+                text-align: right;
+            }
             .services-visual img {
-                width: 60%; /* Reduce bubble size on desktop */
+                width: 60%; /* Reduce bubble size on desktop and align it to the right */
             }
         }
     </style>
