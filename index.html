@@ -28,9 +28,9 @@
             }
         }
 
-        // Show Home by default on page load
+        // Ensure Home is visible on page load
         window.onload = function() {
-            showSection('home');
+            document.getElementById('home').style.display = "block";
         };
     </script>
     <style>
@@ -56,27 +56,6 @@
                 display: none;
             }
         }
-        /* Services Section Styling with Animations */
-        .services-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 50px 5%;
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 1s ease-in-out forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
     </style>
 </head>
 <body>
@@ -100,9 +79,9 @@
     </header>
 
     <!-- =========================================================
-         SECTION 2: HERO SECTION (HOMEPAGE) - RESTORED
+         SECTION 2: HERO SECTION (HOMEPAGE) - FIXED FOR MOBILE
          ========================================================= -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" style="display: block;">
         <div class="hero-logo" style="text-align: center;">
             <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/logo.png" alt="ERMS Hero Logo" style="max-width: 300px; display: block; margin: 0 auto;">
         </div>
