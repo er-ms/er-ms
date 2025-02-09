@@ -51,10 +51,10 @@
                 font-size: 1.5em;
             }
             .services-visual img {
-                width: 80%; /* Reduce bubble size on mobile */
+                width: 80%; /* Keep bubble size on mobile */
             }
         }
-         @media (min-width: 769px) {
+        @media (min-width: 769px) {
             .menu-toggle {
                 display: none;
             }
@@ -62,16 +62,23 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 50px 5%;
             }
             .services-text {
-                width: 50%;
+                width: 55%;
+                text-align: left;
             }
             .services-visual {
-                width: 35%;
+                width: 40%;
                 text-align: right;
+                display: flex;
+                justify-content: center;
             }
             .services-visual img {
-                width: 60%; /* Reduce bubble size on desktop and align it to the right */
+                width: 90%; /* Ensure smaller bubble size and proper alignment */
+                max-width: 400px;
             }
         }
     </style>
@@ -141,12 +148,9 @@
     </section>
 </body>
 </html>
-   
-     <!-- =========================================================
+        <!-- =========================================================
          SECTION : 
          ========================================================= -->
-
-
     <!-- About Us Section -->
     <section id="about">
         <h2>About ERMS</h2>
