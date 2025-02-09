@@ -51,6 +51,11 @@
                 font-size: 1.5em;
             }
         }
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
         /* Services Section Styling with Animations */
         .services-container {
             display: flex;
@@ -70,58 +75,6 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
-            }
-        }
-
-        .services-text {
-            width: 50%;
-            animation: slideInLeft 1s ease-in-out forwards;
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .services-visual {
-            width: 40%;
-            animation: slideInRight 1s ease-in-out forwards;
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .services-visual img {
-            width: 100%;
-            border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .services-visual img:hover {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 768px) {
-            .services-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .services-text, .services-visual {
-                width: 100%;
             }
         }
     </style>
@@ -147,6 +100,19 @@
     </header>
 
     <!-- =========================================================
+         SECTION 2: HERO SECTION (HOMEPAGE) - RESTORED
+         ========================================================= -->
+    <section id="home" class="hero">
+        <div class="hero-logo" style="text-align: center;">
+            <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/logo.png" alt="ERMS Hero Logo" style="max-width: 300px; display: block; margin: 0 auto;">
+        </div>
+        <p class="tagline" style="color: #333; text-align: center;">Insight-Driven Solutions for Strategic Decision-Making</p>
+        <h1 style="color: black; text-align: center;">Driving Business Success Through Comprehensive Management Consulting and Advanced Analytics</h1>
+        <hr>
+        <p class="highlight-text" style="color: #b31b1b; text-align: center;">Expertly Tailored to Address Your Unique Challenges</p>
+    </section>
+
+    <!-- =========================================================
          SECTION 3: SERVICES
          ========================================================= -->
     <section id="services" class="services-container">
@@ -167,7 +133,6 @@
     </section>
 </body>
 </html>
-
    
      <!-- =========================================================
          SECTION : 
