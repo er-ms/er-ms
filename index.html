@@ -58,6 +58,18 @@
             .menu-toggle {
                 display: none;
             }
+         
+            /* Default Layout for Other Sections */
+            .default-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 50px 5%;
+            }
+        
+            /* Unique Layout for Services Section */
             .services-container {
                 display: flex;
                 align-items: center;
@@ -66,22 +78,25 @@
                 margin: 0 auto;
                 padding: 50px 5%;
             }
+        
             .services-text {
                 width: 58%;
                 text-align: left;
                 padding-right: 30px;
-                border-right: 2px solid #ccc; /* Vertical separator between text & bubble */
+                border-right: 2px solid #ccc; /* Separator line between text & bubble */
             }
+        
             .services-visual {
-                width: 38%;
+                width: 40%;
                 text-align: center;
                 display: flex;
                 justify-content: center;
-                align-items: center; /* Ensure the image is centered */
+                align-items: center; /* Ensures the image is centered */
             }
+        
             .services-visual img {
                 width: 100%; /* Make sure the image fits inside the space */
-                max-width: 350px; /* Prevent it from becoming too large */
+                max-width: 350px; /* Prevents the bubble from getting too large */
                 display: block;
             }
         }
