@@ -23,13 +23,10 @@
             let selectedSection = document.getElementById(sectionId);
             selectedSection.style.display = "block";
         
-            // Ensure images reload when switching sections
-            let images = selectedSection.querySelectorAll("img");
-            images.forEach(img => {
-                let src = img.src;
-                img.src = ""; // Reset image source
-                img.src = src; // Reload image to fix rendering issues
-            });
+            // Fix layout issues when switching sections
+            if (sectionId === "services") {
+                document.querySelector(".services-container").style.display = "flex";
+            }
         
             // Close the menu when an item is clicked (for mobile view)
             let menu = document.querySelector('nav ul');
@@ -37,6 +34,7 @@
                 menu.classList.remove('active');
             }
         }
+       
 
         // Ensure Home is visible on page load
         window.onload = function() {
