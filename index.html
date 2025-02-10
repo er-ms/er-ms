@@ -58,17 +58,20 @@
                 cursor: pointer;
                 font-size: 1.5em;
             }
-            .services-visual {
-                    width: 40%;
-                    text-align: right;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-                    buttom: -100px; /* Moves the bubble slightly lower */  
+           .services-visual {
+                width: 100%; /* Full width on mobile */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                bottom: 20px; /* Moves the element to the bottom */
+                left: 50%;
+                transform: translateX(-50%); /* Centers it horizontally */
             }
+        
             .services-visual img {
-                width: 80%; /* Keep bubble size on mobile */
+                width: 80%; /* Keep the image size optimized */
+                max-width: 350px;
             }
         }
          @media (min-width: 769px) {
