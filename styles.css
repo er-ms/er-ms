@@ -178,18 +178,22 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+/* Center container */
 .leadership-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
+/* Image styling */
 .leadership-container img {
-    width: 50%; /* Increased size */
-    max-width: 450px; /* Make it larger */
+    width: 60%; /* Slightly bigger */
+    max-width: 500px;
 }
 
+/* Names container */
 .leader-names {
     display: flex;
     justify-content: center;
@@ -199,7 +203,9 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
-.leader-name h3 {
+/* Styling for names */
+.leader-name {
+    text-align: center;
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -207,17 +213,17 @@ nav ul li a:hover {
 .leader-name p {
     font-size: 1.1em;
     font-weight: bold;
-    color: #666; /* Light gray for subtler contrast */
+    color: #666; /* Light gray for contrast */
 }
 
-/* Mobile Fix */
+/* MOBILE FIX */
 @media (max-width: 768px) {
     .leader-names {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
 
     .leadership-container img {
-        width: 80%; /* Keep size balanced */
+        width: 90%;
     }
 }
