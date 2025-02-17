@@ -179,19 +179,23 @@ nav ul li a:hover {
 }
 
 /* Center container */
+/* Image styling */
 .leadership-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
 }
 
 /* Image styling */
 .leadership-container img {
-    width: 60%; /* Slightly bigger */
-    max-width: 500px;
+    width: 70%; /* Increase size */
+    max-width: 600px; /* Set a larger max limit */
+    display: block; /* Ensures it doesn’t behave like inline */
+    margin: 0 auto; /* Extra centering if needed */
 }
+
+
+
 
 /* Names container */
 .leader-names {
