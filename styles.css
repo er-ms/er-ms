@@ -219,10 +219,10 @@ nav ul li a:hover {
     font-weight: bold;
     color: #666; /* Light gray for contrast */
 }
-.leadership-description {
-    text-align: center; /* Ensures text is centered */
-    max-width: 80%; /* Keeps it contained for readability */
-    margin: 20px auto; /* Centers horizontally */
+.about-outro {
+    text-align: center; /* Center the text */
+    max-width: 80%; /* Keep it contained for readability */
+    margin: 20px auto; /* Center horizontally */
 }
 
 /* MOBILE FIX */
