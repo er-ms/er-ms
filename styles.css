@@ -157,3 +157,92 @@ nav ul li a:hover {
         display: none;
     }
 }
+/* =========================================================
+   ABOUT US SECTION - Leadership Team Styling
+========================================================= */
+.about-section {
+    text-align: center;
+    padding: 50px 5%;
+}
+
+/* Text block at the top */
+.about-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Leadership team image */
+.about-team {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.about-team img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Leadership profiles */
+.leadership {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.leader {
+    text-align: center;
+    width: 250px;
+}
+
+.leader img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #b31b1b;
+}
+
+.leader h3 {
+    margin-top: 15px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #000;
+}
+
+.leader p {
+    font-size: 1.1em;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Bottom text block */
+.about-text {
+    max-width: 900px;
+    margin: 30px auto;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVENESS
+========================================================= */
+@media (max-width: 768px) {
+    .leadership {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leader {
+        width: 100%;
+    }
+
+    .leader img {
+        width: 150px;
+        height: 150px;
+    }
+}
