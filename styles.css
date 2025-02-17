@@ -228,11 +228,14 @@ nav ul li a:hover {
 /* MOBILE FIX */
 @media (max-width: 768px) {
     .leader-names {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row; /* Keep names side by side */
+        justify-content: center; /* Center them */
+        gap: 10px; /* Maintain spacing */
+        font-size: 0.9em; /* Slightly reduce text size */
     }
 
     .leadership-container img {
-        width: 90%;
+        width: 112.5%; /* Increase image size by 1.25x */
+        max-width: 350px; /* Prevent it from getting too big */
     }
 }
