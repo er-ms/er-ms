@@ -265,13 +265,53 @@ nav ul li a:hover {
 }
 
 /* Embedded Google Form */
+/* Updated Contact Form Styling */
 .contact-form {
     flex: 1;
     background: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside the form */
 }
+
+/* Styling for Inputs & Textarea */
+.contact-form input,
+.contact-form textarea {
+    width: 90%; /* Increase width */
+    margin-bottom: 15px;
+    padding: 15px; /* Increase padding */
+    font-size: 1.2em; /* Increase text size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Make textarea larger */
+.contact-form textarea {
+    height: 150px; /* Increase height */
+    resize: none;
+}
+
+/* Improve Button Styling */
+.contact-form button {
+    width: 95%;
+    background-color: #b31b1b;
+    color: white;
+    padding: 15px; /* Make it larger */
+    font-size: 1.2em; /* Bigger text */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #801515;
+}
+
+
 
 /* Expertise Image */
 .contact-image {
@@ -296,6 +336,8 @@ nav ul li a:hover {
 /* =========================================================
    MOBILE RESPONSIVENESS
    ========================================================= */
+
+/* Fix Layout for Mobile */
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
@@ -303,11 +345,13 @@ nav ul li a:hover {
     }
 
     .contact-form {
-        width: 100%;
+        width: 90%;
+        padding: 20px;
     }
 
     .contact-image img {
         max-width: 100%;
     }
 }
+
 
