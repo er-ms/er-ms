@@ -182,47 +182,13 @@
             </div>
         </div>
     <!-- Our Expertise Section -->
-        <!-- Updated Our Services Section -->
-<section id="our-services">
-   
-    
-    <div class="accordion">
-        <!-- Our Services Section -->
         <div class="accordion-item">
-            <button class="accordion-header">Our Services ▼</button>
+            <button class="accordion-header">Our Expertise ▼</button>
             <div class="accordion-content">
-                <!-- Our Expertise Subsection -->
-                <div class="sub-accordion">
-                    <button class="sub-accordion-header">Our Expertise ▼</button>
-                    <div class="sub-accordion-content">
-                        <p>
-                            Our expertise spans Risk and Financial Modeling, Regulatory Compliance, Business Strategy & Growth, Predictive Analytics, Machine Learning & AI, Data Analytics & Reporting, and Risk Management Solutions. We leverage cutting-edge methodologies to deliver impactful and sustainable solutions.
-                        </p>
-                        <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/ourexpertise.png" alt="Our Expertise" class="accordion-image">
-                    </div>
-                </div>
-                
-                <!-- Services for Insurers and Payors Subsection -->
-                <div class="sub-accordion">
-                    <button class="sub-accordion-header">Services for Insurers and Payors ▼</button>
-                    <div class="sub-accordion-content">
-                        <p>
-                            Providing tailored actuarial, risk management, and compliance solutions for insurers and payors. Our expertise includes capital modeling, pricing strategies, regulatory compliance, and financial projections to optimize operations and ensure market competitiveness.
-                        </p>
-                        <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/insurersservices.png" alt="Services for Insurers and Payors" class="accordion-image">
-                    </div>
-                </div>
-                
-                <!-- Services for Healthcare Providers Subsection -->
-                <div class="sub-accordion">
-                    <button class="sub-accordion-header">Services for Healthcare Providers ▼</button>
-                    <div class="sub-accordion-content">
-                        <p>
-                            Delivering data-driven solutions for hospitals, clinics, and healthcare networks. Our services encompass healthcare analytics, fraud detection, predictive modeling, and patient-centric financial strategies to enhance operational efficiency and patient care.
-                        </p>
-                        <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/healthcareservices.png" alt="Services for Healthcare Providers" class="accordion-image">
-                    </div>
-                </div>
+                <p>
+                    Our expertise spans Risk and Financial Modeling, Regulatory Compliance, Business Strategy & Growth, Predictive Analytics, Machine Learning & AI, Data Analytics & Reporting, and Risk Management Solutions. We leverage cutting-edge methodologies to deliver impactful and sustainable solutions.
+                </p>
+                <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/ourexpertise.png" alt="Our Expertise" class="accordion-image">
             </div>
         </div>
         
@@ -251,7 +217,7 @@
     border-radius: 5px;
     overflow: hidden;
 }
-.accordion-header, .sub-accordion-header {
+.accordion-header {
     background: #b31b1b;
     color: white;
     width: 100%;
@@ -265,7 +231,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.accordion-content, .sub-accordion-content {
+.accordion-content {
     display: none;
     padding: 15px;
     background: white;
@@ -277,13 +243,8 @@
     margin: 20px auto;
     border-radius: 5px;
 }
-.accordion-header.active::after, .sub-accordion-header.active::after {
+.accordion-header.active::after {
     content: "▲";
-}
-.sub-accordion {
-    margin-left: 20px;
-    border-left: 3px solid #b31b1b;
-    padding-left: 10px;
 }
 </style>
 
@@ -303,18 +264,8 @@ headers.forEach(header => {
         }
     });
 });
-
-// Sub-Accordion Functionality
-const subHeaders = document.querySelectorAll(".sub-accordion-header");
-subHeaders.forEach(subHeader => {
-    subHeader.addEventListener("click", (e) => {
-        e.stopPropagation(); // Prevents parent accordion from closing
-        const content = subHeader.nextElementSibling;
-        content.style.display = content.style.display === "block" ? "none" : "block";
-        subHeader.classList.toggle("active");
-    });
-});
 </script>
+
 
         
 <!-- =========================================================
