@@ -152,35 +152,89 @@
     <!-- =========================================================
          SECTION 3: SERVICES (Fixed Layout Alignment)
          ========================================================= -->
-    <section id="services" class="services-container">
-        <div class="services-text">
-            <h2>Our Services</h2>
-            <h3>Integrated Consulting Framework</h3>
-            <ul>
-                <li><strong>Risk & Financial Modeling</strong> - Support for health, life, pensions, and P&C, including pricing, reserving, and risk assessment.</li>
-                <li><strong>Regulatory Compliance</strong> - Guidance on navigating regulatory standards and ensuring compliance.</li>
-                <li><strong>Business Strategy & Growth</strong> - Strategic consulting to foster sustainable growth and leverage data for competitive advantage.</li>
-                <li><strong>Predictive Analytics</strong> - Forecast trends, optimize client retention, and support business decisions.</li>
-                <li><strong>Data Analytics & Reporting</strong> - Customized analysis and reporting to facilitate data-driven decision-making.</li>
-                <li><strong>Risk Management Solutions</strong> - Strategies to manage risks and strengthen financial and operational resilience.</li>
-            </ul>
-            <h3>Healthcare-Specific Insights</h3>
-            <ul>
-                <li><strong>Clinical & Operational Analytics</strong> - Providing actionable insights to improve patient care, streamline operations, and reduce healthcare costs.</li>
-                <li><strong>Regulatory Compliance in Healthcare</strong> - Supporting healthcare organizations in meeting regulatory standards, including data privacy compliance and security.</li>
-                <li><strong>Strategic Health & Financial Planning</strong> - Crafting strategies to optimize resource allocation, budget planning, and financial stability.</li>
-                <li><strong>Patient Outcome Improvement</strong> - Utilizing data to enhance patient outcomes, reducing readmissions, and aligning quality metrics with best practices.</li>
-                <li><strong>Healthcare Predictive Modeling</strong> - Leveraging analytics to anticipate patient needs and improve treatment planning.</li>
-                <li><strong>Customized Reporting & KPI Development</strong> - Developing tailored reports and Key Performance Indicators (KPIs) for healthcare leaders.</li>
-                <li><strong>Healthcare Risk Management Solutions</strong> - Strategies to manage clinical, operational, and financial risks, enhancing patient safety.</li>
-            </ul>
+<!-- =========================================================
+     SECTION 3: OUR SERVICES (Title + First Collapsible Section)
+     ========================================================= -->
+<!-- Updated Our Services Section -->
+<section id="our-services">
+    <h2>Driving Business Success Through Comprehensive Management Consulting and Advanced Analytics</h2>
+    
+    <div class="accordion">
+        <!-- About Us Section -->
+        <div class="accordion-item">
+            <button class="accordion-header">About Us ▼</button>
+            <div class="accordion-content">
+                <p>
+                    Built on a foundation of expertise and a commitment to excellence, ERMS specializes in delivering tailored consulting services that transform data into actionable insights. We empower organizations in financial services, insurance, and regulatory sectors to navigate challenges, drive sustainable growth, and achieve compliance with confidence.
+                </p>
+                <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/aboutus.png" alt="About Us" class="accordion-image">
+            </div>
         </div>
-        <div class="services-visual">
-            <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/brochurevisual.png" alt="Our Services">
-        </div>
-    </section>
-</body>
-</html>
+    </div>
+</section>
+
+<style>
+/* Accordion Styling */
+.accordion {
+    max-width: 900px;
+    margin: auto;
+}
+.accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.accordion-header {
+    background: #b31b1b;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background: white;
+}
+.accordion-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+.accordion-header.active::after {
+    content: "▲";
+}
+</style>
+
+<script>
+// Accordion Functionality
+const headers = document.querySelectorAll(".accordion-header");
+headers.forEach(header => {
+    header.addEventListener("click", () => {
+        const content = header.nextElementSibling;
+        const isOpen = content.style.display === "block";
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        document.querySelectorAll(".accordion-header").forEach(h => h.classList.remove("active"));
+        
+        if (!isOpen) {
+            content.style.display = "block";
+            header.classList.add("active");
+        }
+    });
+});
+</script>
+
+
         
 <!-- =========================================================
      SECTION: ABOUT US - LEADERSHIP TEAM
