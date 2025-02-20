@@ -245,8 +245,12 @@ nav ul li a:hover {
 #contact {
     text-align: center;
     padding: 60px 5%;
-    background-color: #f8f8f8;
+    background: radial-gradient(circle at bottom left, 
+        rgba(179, 27, 27, 0.6) 0%, 
+        rgba(204, 204, 204, 0.4) 40%, 
+        white 80%);
 }
+
 
 .contact-intro {
     font-size: 1.2em;
@@ -321,8 +325,9 @@ nav ul li a:hover {
 }
 
 .contact-image img {
-    max-width: 80%;
-    height: auto;
+    max-width: 100%; /* Increase size */
+    height: 100%; /* Ensure it scales properly */
+    object-fit: contain; /* Prevents distortion */
 }
 
 /* Footer Text */
