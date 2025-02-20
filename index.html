@@ -292,6 +292,18 @@ headers.forEach(header => {
         }
     });
 });
+
+// Sub-Accordion Functionality - Fixing the Arrows
+const subHeaders = document.querySelectorAll(".sub-accordion-header");
+subHeaders.forEach(subHeader => {
+    subHeader.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevents parent accordion from closing
+        const content = subHeader.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+        subHeader.classList.toggle("active");
+    });
+});
+
 </script>
 
 
