@@ -17,26 +17,23 @@
         }
          // JavaScript to enable section navigation and close menu on mobile
         function showSection(sectionId) {
-    let sections = document.querySelectorAll("section");
-    sections.forEach(section => section.style.display = "none");
-
-    let selectedSection = document.getElementById(sectionId);
-    if (selectedSection) {
-        selectedSection.style.display = "block";
-    }
-
-    // Ensure the accordion remains functional
-    if (sectionId === "our-services") {
-        document.querySelector(".accordion").style.display = "block";
-    }
-
-    // Close the menu when an item is clicked (for mobile view)
-    let menu = document.querySelector('nav ul');
-    if (menu.classList.contains('active')) {
-        menu.classList.remove('active');
-    }
-}
-
+            let sections = document.querySelectorAll("section");
+            sections.forEach(section => section.style.display = "none");
+        
+            let selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = "block";
+        
+            // Fix layout issues when switching sections
+            if (sectionId === "services") {
+                document.querySelector(".services-container").style.display = "flex";
+            }
+        
+            // Close the menu when an item is clicked (for mobile view)
+            let menu = document.querySelector('nav ul');
+            if (menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        }
        
 
         // Ensure Home is visible on page load
