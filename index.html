@@ -154,7 +154,7 @@
 <!-- =========================================================
      SECTION 2: about us - about
      ========================================================= -->
-<!-- Updated Our Services Section -->
+<!-- Updated About Us Section -->
 <section id="about">
     <h2>Driving Business Success Through Comprehensive Management Consulting and Advanced Analytics</h2>
     
@@ -169,9 +169,9 @@
                 <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/aboutus.png" alt="About Us" class="accordion-image">
             </div>
         </div>
-   
- <!-- Why Choose Us -->
-    <div class="accordion-item">
+        
+        <!-- Why Choose Us Section -->
+        <div class="accordion-item">
             <button class="accordion-header">Why Choose Us? ▼</button>
             <div class="accordion-content">
                 <p>
@@ -180,14 +180,43 @@
                 <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/whyus.png" alt="Why Choose Us" class="accordion-image">
             </div>
         </div>
-    <!-- Our Services Section -->
+        
+        <!-- Our Services Section -->
         <div class="accordion-item">
             <button class="accordion-header">Our Services ▼</button>
             <div class="accordion-content">
-                <p>
-                    Our expertise spans Risk and Financial Modeling, Regulatory Compliance, Business Strategy & Growth, Predictive Analytics, Machine Learning & AI, Data Analytics & Reporting, and Risk Management Solutions. We leverage cutting-edge methodologies to deliver impactful and sustainable solutions.
-                </p>
-                <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/ourexpertise.png" alt="Our Expertise" class="accordion-image">
+                <!-- Our Expertise Subsection -->
+                <div class="sub-accordion">
+                    <button class="sub-accordion-header">Our Expertise ▼</button>
+                    <div class="sub-accordion-content">
+                        <p>
+                            Our expertise spans Risk and Financial Modeling, Regulatory Compliance, Business Strategy & Growth, Predictive Analytics, Machine Learning & AI, Data Analytics & Reporting, and Risk Management Solutions. We leverage cutting-edge methodologies to deliver impactful and sustainable solutions.
+                        </p>
+                        <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/ourexpertise.png" alt="Our Expertise" class="accordion-image">
+                    </div>
+                </div>
+                
+                <!-- Services for Insurers and Payors Subsection -->
+                <div class="sub-accordion">
+                    <button class="sub-accordion-header">Services for Insurers and Payors ▼</button>
+                    <div class="sub-accordion-content">
+                        <p>
+                            Providing tailored actuarial, risk management, and compliance solutions for insurers and payors. Our expertise includes capital modeling, pricing strategies, regulatory compliance, and financial projections to optimize operations and ensure market competitiveness.
+                        </p>
+                        <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/insurersservices.png" alt="Services for Insurers and Payors" class="accordion-image">
+                    </div>
+                </div>
+                
+                <!-- Services for Healthcare Providers Subsection -->
+                <div class="sub-accordion">
+                    <button class="sub-accordion-header">Services for Healthcare Providers ▼</button>
+                    <div class="sub-accordion-content">
+                        <p>
+                            Delivering data-driven solutions for hospitals, clinics, and healthcare networks. Our services encompass healthcare analytics, fraud detection, predictive modeling, and patient-centric financial strategies to enhance operational efficiency and patient care.
+                        </p>
+                        <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/healthcareservices.png" alt="Services for Healthcare Providers" class="accordion-image">
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -201,7 +230,7 @@
                 <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/ourprocess.png" alt="Our Process" class="accordion-image">
             </div>
         </div>
-     </div>
+    </div>
 </section>
 
 <style>
@@ -216,7 +245,7 @@
     border-radius: 5px;
     overflow: hidden;
 }
-.accordion-header {
+.accordion-header, .sub-accordion-header {
     background: #b31b1b;
     color: white;
     width: 100%;
@@ -230,7 +259,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.accordion-content {
+.accordion-content, .sub-accordion-content {
     display: none;
     padding: 15px;
     background: white;
@@ -242,7 +271,7 @@
     margin: 20px auto;
     border-radius: 5px;
 }
-.accordion-header.active::after {
+.accordion-header.active::after, .sub-accordion-header.active::after {
     content: "▲";
 }
 </style>
