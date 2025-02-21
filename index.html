@@ -1,79 +1,451 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ERMS - AI-Driven Management Consulting & Advanced Analytics">
-    <meta name="keywords" content="AI-driven pricing, healthcare analytics, IFRS 17, ORSA, fraud detection, risk modeling, actuarial consulting">
+    
+<meta name="description" content="ERMS is a management consulting firm delivering data-driven insights and strategic advisory. Leveraging advanced analytics, AI, and actuarial expertise, we help organizations in financial services, insurance, and regulatory sectors optimize decision-making and drive sustainable growth." />
+
+    
+    <meta name="keywords" content="ERMS, ERMS consulting, actuaries, actuaries in UAE, actuaries in Jordan, actuaries in KSA, actuaries in kuwait, AI-driven consulting, actuarial services, healthcare analytics, insurance consulting, IFRS 17, ORSA, risk modeling, fraud detection, fwa, actuary, fsa, soa, asa, data, financial modeling, regulatory compliance, predictive analytics, data-driven solutions, machine learning, AI, actuarial consulting">
     <meta name="author" content="ERMS">
-    <title>ERMS - Intelligent Consulting Solutions</title>
+    
+    <title>ERMS Consulting - Data-Driven Insights & Strategic Advisory for Insurance & Finance</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "ERMS Consulting",
+          "alternateName": "ERMS",
+          "url": "https://www.er-ms.com",
+          "logo": "https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/logo.png",
+          "description":"ERMS is a management consulting firm delivering data-driven insights and strategic advisory. Leveraging advanced analytics, AI, and actuarial expertise, we help organizations in financial services, insurance, and regulatory sectors optimize decision-making and drive sustainable growth."      
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "areaServed": "UAE, Saudi Arabia, Kuwait, Bahrain, Jordan, Dubai, KSA, Oman, Lebanon, Quatar",
+            "availableLanguage": "English, Arabic, French"
+          }
+        }
+        </script>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        function toggleMenu() {
+            let menu = document.querySelector('nav ul');
+            menu.classList.toggle('active');
+        }
+         // JavaScript to enable section navigation and close menu on mobile
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll("section");
+            sections.forEach(section => section.style.display = "none");
+        
+            let selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = "block";
+        
+            // Fix layout issues when switching sections
+            if (sectionId === "services") {
+                document.querySelector(".services-container").style.display = "flex";
+            }
+        
+            // Close the menu when an item is clicked (for mobile view)
+            let menu = document.querySelector('nav ul');
+            if (menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        }
+       
+
+        // Ensure Home is visible on page load
+        window.onload = function() {
+            document.getElementById('home').style.display = "block";
+        };
+    </script>
+    <style>
+        @media (max-width: 768px) {
+            .hero-logo img {
+                display: none !important;
+            }
+            .menu-toggle {
+                display: block !important;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background: #b31b1b;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1.5em;
+            }
+           .services-container {
+                display: flex;
+                flex-direction: column; /* Stack elements vertically */
+                align-items: left;
+                text-align: left;
+            }
+            .services-text {
+                width: 100%;
+            }
+            .services-visual {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 30px; /* Pushes bubbles below the text */
+            }
+            .services-visual img {
+                width: 80%; /* Optimized size */
+                max-width: 350px;
+            }
+         }
+         @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
+         
+           .services-container {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 50px 5%;
+                gap: 40px; /* Add spacing between text and image */
+            }
+            
+            .services-text {
+                width: 65%; /* Give text more space */
+                text-align: left;
+            }
+        
+           
+            .services-visual {
+                    width: 40%;
+                    text-align: right;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    top: 70px; /* Moves the bubble slightly lower */
+                    right: -70px; /* Moves the bubble slightly to the right */
+                }
+            .services-visual img {
+                width: 100%; /* Adjust image size */
+                max-width: 300px; /* Prevent it from getting too large */
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- =========================================================
+         SECTION 1: HEADER & NAVIGATION
+         ========================================================= -->
     <header>
         <div class="logo">
-            <img src="logo.png" alt="ERMS Logo">
+            <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/logo.png" alt="ERMS Logo">
         </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#industries">Industries</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul style="text-align: center; list-style: none; padding-left: 10px;">
+                <li style="padding: 5px 0;"><a href="#" onclick="showSection('home')">Home</a></li>
+                <li style="padding: 5px 0;"><a href="#" onclick="showSection('about')">About Us</a></li>
+                <li style="padding: 5px 0;"><a href="#" onclick="showSection('leadership')">Meet Our Leadership Team</a></li>
+                <li style="padding: 5px 0;"><a href="#" onclick="showSection('contact')">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section id="home">
-        <div class="hero">
-            <h1>Strategic Insights. Advanced Analytics. Measurable Impact.</h1>
-            <p>Transforming risk management and business consulting through cutting-edge analytics and actuarial expertise.</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
+
+
+    <!-- =========================================================
+         SECTION 2: HERO SECTION (HOMEPAGE) - FIXED AGAIN
+         ========================================================= -->
+    <section id="home" class="hero" style="display: block;">
+        <div class="hero-logo" style="text-align: center;">
+            <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/invertlogoenterprise.png" alt="ERMS Hero Logo" style="max-width: 500px; display: block; margin: 0 auto;">
         </div>
+        <p class="tagline" style="color: #333; text-align: center;">Insight-Driven Solutions for Strategic Decision-Making</p>
+        <h1 style="color: black; text-align: center;">Driving Business Success Through Comprehensive Management Consulting and Advanced Analytics</h1>
+        <hr>
+        <p class="highlight-text" style="color: #b31b1b; text-align: center;">Expertly Tailored to Address Your Unique Challenges</p>
     </section>
-    
-    <section id="services">
-        <h2>Our Expertise</h2>
-        <div class="service-container">
-            <div class="service-box">
-                <h3>AI-Driven Pricing</h3>
-                <p>Optimized pricing models using data science and actuarial insights.</p>
-            </div>
-            <div class="service-box">
-                <h3>Fraud, Waste & Abuse Detection</h3>
-                <p>Advanced analytics to detect and prevent financial leakage.</p>
-            </div>
-            <div class="service-box">
-                <h3>IFRS 17 & Risk Compliance</h3>
-                <p>Helping businesses navigate evolving regulatory landscapes.</p>
+
+   
+<!-- =========================================================
+     SECTION 2: about us - about
+     ========================================================= -->
+<!-- Updated About Us Section -->
+<section id="about">
+   <h1 style="color: black; text-align: center;">Empowering Businesses with Strategic Insights & Data-Driven Solutions</h1>
+<p style="text-align: center;">ERMS delivers cutting-edge consulting services, combining strategic advisory, advanced analytics, and AI-driven insights to optimize decision-making and drive sustainable growth.</p>
+   
+    <div class="accordion">
+        <!-- About Us Section -->
+        <div class="accordion-item">
+            <button class="accordion-header">About Us ▼</button>
+            <div class="accordion-content">
+                 <h2>About Us</h2>
+                <p>
+                    Built on a foundation of expertise and a commitment to excellence, ERMS specializes in delivering tailored consulting services that transform data into actionable insights. We empower organizations in financial services, insurance, and regulatory sectors to navigate challenges, drive sustainable growth, and achieve compliance with confidence.
+                </p>
+                <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/aboutus.png" alt="About Us" class="accordion-image">
             </div>
         </div>
-    </section>
-    
-    <section id="about">
-        <h2>About ERMS</h2>
-        <p>At ERMS, we combine actuarial expertise with AI-powered analytics to drive informed decision-making in insurance, healthcare, and financial industries.</p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="#" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-    
+        
+        <!-- Why Choose Us Section -->
+        <div class="accordion-item">
+            <button class="accordion-header">Why Choose Us? ▼</button>
+            <div class="accordion-content">
+                 <h2>Why Choose Us?</h2>
+                <p>
+                    ERMS is your trusted partner for strategic advisory, delivering data-driven insights, proven expertise, and client-centric solutions. With deep regulatory knowledge and a commitment to long-term partnerships, we empower businesses to make informed decisions and achieve sustainable success.
+                </p>
+                <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/whyus.png" alt="Why Choose Us" class="accordion-image">
+            </div>
+        </div>
+        
+        <!-- Our Services Section -->
+        <div class="accordion-item">
+            <button class="accordion-header">Our Services ▼</button>
+            <div class="accordion-content">
+                <h2>Our Services</h2>
+                <!-- Our Expertise Subsection -->
+                <div class="sub-accordion">
+                    <button class="sub-accordion-header">Our Expertise ▼</button>
+                    <div class="sub-accordion-content">
+                        <h3>Our Expertise</h3>
+                        <p>
+                            Our expertise spans Risk and Financial Modeling, Regulatory Compliance, Business Strategy & Growth, Predictive Analytics, Machine Learning & AI, Data Analytics & Reporting, and Risk Management Solutions. We leverage cutting-edge methodologies to deliver impactful and sustainable solutions.
+                        </p>
+                        <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/ourexpertise.png" alt="Our Expertise" class="accordion-image">
+                    </div>
+                </div>
+                
+                <!-- Services for Insurers and Payors Subsection -->
+                <div class="sub-accordion">
+                    <button class="sub-accordion-header">Services for Insurers and Payors ▼</button>
+                    <div class="sub-accordion-content">
+                         <h3>Services for Insurers and Payors</h3>
+                        <p>
+                            Providing tailored actuarial, risk management, and compliance solutions for insurers and payors. Our expertise includes capital modeling, pricing strategies, regulatory compliance, and financial projections to optimize operations and ensure market competitiveness.
+                        </p>
+                        <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/insurersservices.png" alt="Services for Insurers and Payors" class="accordion-image">
+                    </div>
+                </div>
+                
+                <!-- Services for Healthcare Providers Subsection -->
+                <div class="sub-accordion">
+                    <button class="sub-accordion-header">Services for Healthcare Providers ▼</button>
+                    <div class="sub-accordion-content">
+                         <h3>Services for Healthcare Providers</h3>
+                        <p>
+                            Delivering data-driven solutions for hospitals, clinics, and healthcare networks. Our services encompass healthcare analytics, fraud detection, predictive modeling, and patient-centric financial strategies to enhance operational efficiency and patient care.
+                        </p>
+                        <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/healthcareservices.png" alt="Services for Healthcare Providers" class="accordion-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Our Process Section -->
+        <div class="accordion-item">
+            <button class="accordion-header">Our Process ▼</button>
+            <div class="accordion-content">
+                <h2>Our Process</h2>
+                <p>
+                    Our process follows international standards, ensuring compliance, efficiency, and effectiveness in every solution we deliver. We align with best practices to optimize business operations and enhance decision-making.
+                </p>
+                <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/ourprocess.png" alt="Our Process" class="accordion-image">
+            </div>
+        </div>
+    <!-- Technology-Driven Approach Section -->
+        <div class="accordion-item">
+            <button class="accordion-header">Technology-Driven Approach ▼</button>
+            <div class="accordion-content">
+                <h2>Technology-Driven Approach</h2>
+                <p>
+                    Leveraging the latest advancements in machine learning, artificial intelligence, and data analytics, ERMS provides cutting-edge solutions that enhance decision-making, optimize operations, and drive business success. Our technology-driven approach ensures real-time insights, automated processes, and enhanced predictive capabilities.
+                </p>
+                <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/techno.png" alt="Technology-Driven Approach" class="accordion-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Accordion Styling */
+.accordion {
+    max-width: 900px;
+    margin: auto;
+}
+.accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.accordion-header, .sub-accordion-header {
+    background: #b31b1b;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accordion-content, .sub-accordion-content {
+    display: none;
+    padding: 15px;
+    background: white;
+}
+.accordion-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+.accordion-header.active::after, .sub-accordion-header.active::after {
+    content: "▲";
+}
+</style>
+
+<script>
+// Accordion Functionality
+const headers = document.querySelectorAll(".accordion-header");
+headers.forEach(header => {
+    header.addEventListener("click", () => {
+        const content = header.nextElementSibling;
+        const isOpen = content.style.display === "block";
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        document.querySelectorAll(".accordion-header").forEach(h => h.classList.remove("active"));
+        
+        if (!isOpen) {
+            content.style.display = "block";
+            header.classList.add("active");
+        }
+    });
+});
+
+// Sub-Accordion Functionality - Fixing the Arrows
+const subHeaders = document.querySelectorAll(".sub-accordion-header");
+subHeaders.forEach(subHeader => {
+    subHeader.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevents parent accordion from closing
+        const content = subHeader.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+        subHeader.classList.toggle("active");
+    });
+});
+
+</script>
+
+
+        
+<!-- =========================================================
+     SECTION3: LEADERSHIP TEAM
+     ========================================================= -->
+<!-- ABOUT US SECTION -->
+<section id="leadership">
+    <p class="about-intro">
+        ERMS is led by a specialized leadership team that drives our expertise in management and business consulting for insurers, regulators, and other sectors. 
+        Supported by a dynamic network of skilled professionals, we deliver data-driven solutions and client-centric approaches, making us a trusted partner for strategic growth.
+    </p>
+
+    <h2 class="leadership-heading">Meet Our Leadership Team</h2>
+
+    <div class="leadership-container">
+        <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/ermsaboutpictureremovebg.png" alt="Leadership Team">
+    </div>
+
+    <div class="leader-names">
+        <div class="leader-name">
+            <h3>Elias Rahal, FSA</h3>
+            <p>CEO</p>
+        </div>
+        <div class="leader-name">
+            <h3>Myriam Sakr, ASA</h3>
+            <p>VP</p>
+        </div>
+    </div>
+
+    <p class="about-outro">
+        Our commitment to excellence is backed by years of expertise in actuarial science, data-driven decision-making, and strategic business advisory.
+        At ERMS, we ensure that our clients gain actionable insights, foster innovation, and remain ahead of industry challenges.
+    </p>
+</section>
+
+
+<!-- =========================================================
+     SECTION: CONTACT US 
+     ========================================================= -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p class="contact-intro">
+        We’d love to hear from you! Whether you have inquiries about our services or need expert insights, reach out to us.
+    </p>
+
+   <div class="contact-container">
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <form id="contact-form" action="https://script.google.com/macros/s/AKfycbx949wcBnDwpio1JZGDZPLgjdqHFKDOUHo6n57cKDMVielQoc2Sd9kCf76QjN7ZH5OG_w/exec" method="POST">
+    <input type="text" id="name" name="name" placeholder="Name" required>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <textarea id="message" name="message" placeholder="Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+<p id="form-status"></p>
+
+    </div>
+
+        <!-- Expertise Image -->
+        <div class="contact-image">
+            <img src="https://raw.githubusercontent.com/er-ms/er-ms/refs/heads/dev/invertlogoexpert.png" alt="Expertise">
+        </div>
+    </div>
+
+    <!-- Footer Call-to-Action -->
+    <p class="contact-outro">
+        <strong>Reach out today to learn how ERMS can support your business growth!</strong>
+    </p>
+</section>
+
+<!-- =========================================================
+         SECTION : confirmatiom
+         ========================================================= -->
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(event){
+    event.preventDefault(); // Prevents form from reloading the page
+    var form = event.target;
+    var formData = new FormData(form);
+
+    fetch(form.action, {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("form-status").innerText = "Thank you! Your message has been sent.";
+        form.reset(); // Clears the form after submission
+    })
+    .catch(error => {
+        document.getElementById("form-status").innerText = "Error sending message. Please try again.";
+    });
+});
+</script>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 ERMS. All rights reserved.</p>
     </footer>
+
+
 </body>
 </html>
