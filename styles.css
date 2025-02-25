@@ -1,6 +1,13 @@
 /* =========================================================
    ERMS Website Styles - Professional & Optimized
    ========================================================= */
+.section {
+    display: none; /* Hide all sections by default */
+}
+
+.section.active {
+    display: block; /* Show only the active section */
+}
 
 /* =========================================================
    SECTION 1: GENERAL STYLES
